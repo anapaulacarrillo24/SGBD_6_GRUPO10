@@ -4,7 +4,7 @@ Este repositorio contiene la caracterizacion del sistema de persistencia de dato
 
 El proyecto incluye:
 
-Dataset base en Excel
-Modelo físico de base de datos
-Scripts SQL de creación e inserción
-Consultas representativas
+-Dataset base en Excel
+-Modelo físico de base de datos
+-Scripts SQL de creación e inserción
+-Consultas representativas
