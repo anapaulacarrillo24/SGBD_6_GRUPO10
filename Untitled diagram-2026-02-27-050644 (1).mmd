@@ -1,0 +1,60 @@
+---
+config:
+  layout: elk
+---
+erDiagram
+    CAMPUS ||--o{ UBICACION : contiene
+    CAMPUS ||--o{ ACTIVO : agrupa
+
+    UBICACION ||--o{ ACTIVO : ubica
+
+    CATEGORIA_ACTIVO ||--o{ ACTIVO : clasifica
+    DEPARTAMENTO ||--o{ ACTIVO : asigna
+    RESPONSABLE ||--o{ ACTIVO : responsable_de
+
+    CAMPUS {
+        int id_campus PK
+        string nombre "UNIQUE"
+    }
+
+    UBICACION {
+        int id_ubicacion PK
+        int id_campus FK
+        string nombre
+        string codigo "opcional"
+        string notas "opcional"
+    }
+
+    CATEGORIA_ACTIVO {
+        int id_categoria PK
+        string nombre "UNIQUE"
+        string descripcion "opcional"
+    }
+
+    DEPARTAMENTO {
+        int id_departamento PK
+        string nombre "UNIQUE"
+        string centro_coste "opcional"
+    }
+
+    RESPONSABLE {
+        int id_responsable PK
+        string nombre
+        string email "opcional"
+        string puesto "opcional"
+        int id_departamento FK "opcional (si se desea jerarquizar responsables por depto)"
+    }
+
+    ACTIVO {
+        int id_activo PK
+        string id_workday "UNIQUE (recomendado)"
+        string nombre_activo
+        string numero_serie "opcional"
+        string estado
+        date fecha_adquisicion "opcional"
+        int id_campus FK
+        int id_ubicacion FK
+        int id_categoria FK
+        int id_departamento FK
+        int id_responsable FK
+    }
