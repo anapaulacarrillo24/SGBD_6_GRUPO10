@@ -23,4 +23,7 @@ db/seed.sql
 Estructura del proyecto
 /db/schema.sql → creación de tablas
 /db/seed.sql → datos de consulta
+
+
+“Se incluye docker-compose para reproducibilidad del entorno, aunque también se puede ejecutar manualmente mediante los scripts SQL incluidos”
 docker-compose.yml → entorno automatizado
