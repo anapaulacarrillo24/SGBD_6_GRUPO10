@@ -40,4 +40,8 @@ CREATE TABLE activo (
     FOREIGN KEY (id_campus) REFERENCES campus(id_campus)
 ) ENGINE=InnoDB;
 
+CREATE INDEX idx_activo_estado ON activo(estado);
+CREATE INDEX idx_activo_categoria ON activo(id_categoria);
+CREATE INDEX idx_activo_departamento ON activo(id_departamento);
+CREATE INDEX idx_activo_ubicacion ON activo(id_ubicacion);
 
