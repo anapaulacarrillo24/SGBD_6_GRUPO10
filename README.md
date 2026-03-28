@@ -2,9 +2,25 @@
 documentación , modelado y consultas /
 Este repositorio contiene la caracterizacion del sistema de persistencia de datos (datasets) cuyo objetivo es la implementación de un MVP de un sistema WMS para la gestión de activos fijos para el departamento "Skilled Trade" en multiples campus de la universidad de Austin, tx.
 
-El proyecto incluye:
+Ejecucion del proyecto :
+Opción 1: Con Docker (recomendado)
+Ejecutar:
+docker-compose up
+Conectarse a la base de datos:
+Host: localhost
+Puerto: 3306
+Usuario: root
+Contraseña: root
+Base de datos: proyecto
 
--Dataset base en Excel
--Modelo físico de base de datos
--Scripts SQL de creación e inserción
--Consultas representativas
+Opción 2: Manual
+Crear base de datos:
+CREATE DATABASE proyecto;
+USE proyecto;
+Ejecutar:
+db/schema.sql
+db/seed.sql
+Estructura del proyecto
+/db/schema.sql → creación de tablas
+/db/seed.sql → datos de consulta
+docker-compose.yml → entorno automatizado
