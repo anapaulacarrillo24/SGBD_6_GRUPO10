@@ -13,9 +13,12 @@ Tecnologías utilizadas:
 Estructura del proyecto
 
 /db
-├── schema.sql → estructura de la base de datos
-├── seed.sql → datos iniciales
-├── queries.sql → consultas de análisis
+schema.sql → estructura de la base de datos
+seed.sql → datos iniciales
+queries.sql → consultas de análisis
+/datset
+AGREGATED INVENTORY DAT → dataset utilizado para obtener la informacion
+/diagrama 
 
 docker-compose.yml → entorno automatizado
 README.md → documentación
